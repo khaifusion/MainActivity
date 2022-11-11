@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.gps">
+    package="com.lguplus.drivinglog">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -15,20 +15,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.MainActivity">
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBkdRkZTav_2X_7PqF-ZpV-18ZxLIpye7Y"/>
+            android:value="AIzaSyArfK4Vgk0qfdCmXqRb56wd4gTp2RtzSv4" />
 
         <service
-            android:name=".LocationService"
+            android:name="com.lguplus.drivinglog.LocationService"
             android:enabled="true"
             android:exported="false"
             tools:ignore="Instantiatable" />
 
         <activity
-            android:name=".NumberActivity"
+            android:name="com.lguplus.drivinglog.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,8 +38,31 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"
+        <activity android:name="com.lguplus.drivinglog.MainActivity"
             tools:ignore="Instantiatable" />
+
+        <activity android:name="com.lguplus.drivinglog.StatsActivity"
+            tools:ignore="Instantiatable" />
+
+        <activity android:name="com.lguplus.drivinglog.TotalCarsStatsActivity"
+            tools:ignore="Instantiatable" />
+
+        <activity android:name="com.lguplus.drivinglog.NumberActivity"
+            tools:ignore="Instantiatable" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.lguplus.drivinglog"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+
     </application>
+
+
 
 </manifest>

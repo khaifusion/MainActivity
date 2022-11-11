@@ -2,21 +2,141 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".NumberActivity">
 
-    <EditText
-        android:id="@+id/inputEt"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="250dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:imeOptions="actionDone"/>
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/nextBtn"
+        <TextView
+            android:id="@+id/carNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="차량번호 : "
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="center" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notLoadFromServerTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다음"/>
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="서버로부터 번호를 가져오지 못하셨나요?\n차량번호를 직접 촬영해 주세요"
+        android:textColor="#808080"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/inputEt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:imeOptions="actionDone">
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/cameraLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/cameraBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    app:cornerRadius="30dp"
+                    android:text="사진찍기" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ocrLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/ocrBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    app:cornerRadius="30dp"
+                    android:text="번호추출" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:cornerRadius="30dp"
+                android:text="다음" />
+
+            <Button
+                android:id="@+id/carsStatsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:layout_marginLeft="25dp"
+                app:cornerRadius="30dp"
+                android:text="차량현황" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

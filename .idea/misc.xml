@@ -3,9 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/drawable/ic_account_box.xml" value="0.1" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/drawable/ic_lock.xml" value="0.1" />
         <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_inputNum.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_main.xml" value="0.3233695652173913" />
-        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_number.xml" value="0.1" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_login.xml" value="0.17477203647416414" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_number.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_stats.xml" value="0.1875" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_totalCarsStats.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/activity_totalcarsstats.xml" value="0.1703125" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/layout/spinner_border_layout.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/jongmin/AndroidStudioProjects/MainActivity/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

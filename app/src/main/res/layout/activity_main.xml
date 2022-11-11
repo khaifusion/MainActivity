@@ -12,48 +12,61 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <!--
         <Button
             android:id="@+id/cameraBtn"
             android:text="Camera"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+        -->
         <Button
             android:id="@+id/buttonStartLocationUpdates"
-            android:text="START"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="START"
+            app:cornerRadius="30dp" />
 
         <Button
             android:id="@+id/buttonStopLocationUpdates"
-            android:text="STOP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="STOP"
+            app:cornerRadius="30dp" />
+
+        <Button
+            android:id="@+id/buttonStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="STATS"
+            app:cornerRadius="30dp" />
+
     </LinearLayout>
 
-    <TextView
+    <Chronometer
+        android:id="@+id/chronometer"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_timer"
-        android:textSize="15sp"
         android:layout_below="@id/buttonStartLocationUpdates"
         android:layout_alignParentStart="true"
-        android:text="주행시간 : 0 초" />
+        android:textSize="15sp" />
 
     <TextView
-        android:layout_gravity="center"
-        android:gravity="center"
+        android:id="@+id/tv_distance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_distance"
-        android:textSize="15sp"
-        android:layout_below="@id/tv_timer"
+        android:layout_below="@id/chronometer"
         android:layout_alignParentStart="true"
-        android:text="주행거리 : 0 m" />
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="주행거리 : 0 m"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
     <fragment
         android:id="@+id/map"
@@ -61,12 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        tools:context="com.example.gps.MainActivity" />
+        tools:context="com.lguplus.drivinglog.MainActivity" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
 
 </LinearLayout>
